@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>First Out, Game - Free Demo - Filmtronic</title>
+  <!-- <base href="http://dev.filmtronic.com/first-out-v0.1/" /> -->
+  <meta name="keywords" content="first out free demo, free demo, first out game, platform, platform games, free games, free online games, free pc games, play online games, space, free space games, arcade games, jumping games, silly games, free action games, free computer games, games, pc games, online games, kids games, shooting games, new games, video games" />
+  <meta name="description" content="This is the First Out Game Demo. The aim of the game is to undertake a physical challenge and the player that exits first within a time restriction wins." />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen" />
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <!-- COMMENT-DO-NOT-DELETE: Interchange core.js and code-do-not-upload.js as needed. -->
+  <!--
+  <script src="./js/core.js?<?php #print substr( md5(rand()), 0, 7); ?>" type="text/javascript" charset="utf-8"></script>
+  -->
+  <script src="./js/timer.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/character.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/prop.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/boundary.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/code-do-not-upload.js?<?php print substr( md5(rand()), 0, 7); ?>" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/buzz.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/game.js"></script>
+
+
+  <!-- Caching meta tags - It worked! -->
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+</head>
+<body onresize="resize_canvas()" onload="resize_canvas()">
+<header style="background-color:#EAEAEA;padding: 4px; height: 30px">
+  <a name="top"></a>
+  <a style="float: left" id="logo" href="/"><img width="30" src="./images/logo_small_green_navy_filmtronic.png" /></a>
+  <a id="top_logo_text" href="/"><img border="0" width="150" style="float: left;vertical-align: top; margin-left: 10px;" src="./images/logo_text_navy_green_filmtronic.png" /></a>
+      <div id="tm_header_symbol">&reg;</div>
+  <div class="logo_small_text">&nbsp;&nbsp;First Out v0.1</div>
+  &nbsp;&nbsp;
+  <?php /* ?>
+  <div class="app_title">&nbsp;&nbsp;<?php # print $title;?></div>
+  <? */?>
+  <!--
+  <input id="power_button" type="button" value="PayPal $1 to Play" />
+  <input id="volume_plus" type="button" value="V +" />
+  <input id="volume_minus" type="button" value="V -" />
+  -->
+</header>
+
+<!-- <input id="play_back" type="button" value="PLAY" />
+<input id="record" type="button" value="RECORD" /><br /> -->
+
+    <div id="gui">
+      <!-- The Canvas width/height can shrink for external website integration -->
+      <div id="speech_bubble_2b" class="sb"></div>
+      <div id="speech_bubble_2c" class="sb"></div>
+      <div id="speech_bubble_2a" class="sb"></div>
+
+      <div id="speech_bubble_1b" class="sb"></div>
+      <div id="speech_bubble_1c" class="sb"></div>
+      <div id="speech_bubble_1a" class="sb"></b></div>
+
+      <!-- <div style="height: 4px;font-size: 14px;width: 10px;margin-left:10px;margin-top:240px;border: 1px solid #86826C;padding: 5px;position: absolute;z-index:2;color:#86826C;"></div>
+      </div>
+
+      <div class = "dropdown">
+        <script>
+        function dropdown() {
+            document.getElementById("myMenu").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.drpdwnbtn')) {
+
+                var dropdowns = document.getElementsByClassName("drpdwncntnt"),
+                    i,
+                    openDropdown = dropdowns[i];
+                for (i = 0; i < dropdowns.length; i += 1) {
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+      </script>
+        <button onclick = "dropdown()" class = "drpdwnbtn">Menu</button>
+        <div id = "myMenu" class = "drpdwncntnt">
+            <p><a href="#">Level 1</a></p>
+            <p><a href="#">Level 2</a></p>
+            <p><a href="#">Level 3</a></p>
+        </div>
+      </div>
+      -->
+      <canvas id="canvas_set"></canvas>
+
+      <div id="help">
+        <p>
+          Left/Right Arrows to move.<br />
+          Press Spacebar to Jump.<br />
+          20 seconds to reach exit.
+        </p>
+      </div>
+
+      <div class="ft_player_controls">
+      <!-- <input type="button" value="ON" /> -->
+      <!--
+      CH<span id="channel_number">1</span>
+      <input id="channel_plus" type="button" value="Ch +" />
+      <input id="channel_minus" type="button" value="Ch -" />
+      -->
+      <input id="power_button" type="button" value="PayPal $1 to Play" />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input id="volume_plus" type="button" value="V +" />
+      <input id="volume_minus" type="button" value="V -" />
+      <form id="paypal_form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="LJX3TBDZP83HU">
+        <input type="image" src="https://www.paypalobjects.com/en_AU/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_AU/i/scr/pixel.gif" width="1" height="1">
+      </form>
+    </div>
+  </body>
+</html>

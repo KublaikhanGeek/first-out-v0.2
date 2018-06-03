@@ -1,0 +1,51 @@
+<html>
+<body>
+
+<canvas id="myCanvas" width="600" height="800" style="border:1px solid #000000;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+var canvas = document.getElementById('myCanvas'); 
+var ctx = canvas.getContext('2d'); 
+var x =0, y=0, dx=2, dy =2;
+function drawRotatedImage(x,y,i)
+{
+  ctx.save();  
+  ctx.fillStyle = "red";
+  ctx.translate(x,y);
+  ctx.rotate(i*90*Math.PI/180);
+  switch(i*90)
+  {
+  	case 0 : ctx.strokeRect(x,y,30,60); break;
+  	case 90 : ctx.strokeRect(x,y-30,30,60); break;
+    case 180 : ctx.strokeRect(x-30,y-30,30,60); break;
+    case 270 : ctx.strokeRect(x-30,y,30,60); break;
+  }  
+  ctx.restore();
+}
+function doKeyDown(evt){
+		ctx.clearRect(0,0,canvas.width, canvas.height); 
+	switch (evt.keyCode) {
+		case 38:  /* Up arrow was pressed */
+        	if(y-dy > 0 )
+             y -= dy;
+			drawRotatedImage(x,y,0); 			
+			break;
+		case 40:  /* Down arrow was pressed */
+        	if(y+dy < canvas.height )
+             y += dy;
+			drawRotatedImage(x,y,3); 
+			break;
+		case 37:  /* Left arrow was pressed */
+			drawRotatedImage(0,0,1); 
+			break;
+		case 39:  /* Right arrow was pressed */
+			drawRotatedImage(0,0,2); 
+			break;
+	}	
+}
+
+window.addEventListener('keydown',doKeyDown,true);
+</script>
+</body>
+</html>

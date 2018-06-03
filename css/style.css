@@ -1,0 +1,508 @@
+/***********
+ * FILE: style.css
+ */
+
+body {
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  background: #FFFFFF;
+  font-family: verdana;
+  font-weight: 20px;
+  height: 100%;
+}
+
+#power_button {
+  width: 185px;
+  /*
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  */
+}
+
+input[type=button] {
+  font-size: 8px;
+  font-weight: bold;
+}
+
+input[type=button]:hover {
+  cursor: pointer;
+}
+
+/*
+  margin-left: auto;
+  margin-right: auto;
+*/
+
+#canvas_set {
+  display: block;
+  /** Zoom facility
+  background-positxion: 25% 10%;
+  background-size:400%;
+  */
+  zoom: 100%;
+  position: relative;
+  /* z-index: -1; */
+}
+
+#help {
+  position:absolute;
+  z-index:4;
+  margin-top: -200px;
+  margin-left: 20px;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+.channel {
+  display: block;
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #989381;
+  border-width: 4px 1px 1px 4px;
+  margin-top: 20px;
+}
+
+#channel_off {
+  background-color: #000000;
+  display: block;
+}
+
+/* Might need a line off command_x functionality */
+.line {
+  border: 1px solid #11230E;
+  background: #11230E;
+  padding-left: 2px;
+  margin: 0px;
+  width: 380px;
+  font-size: 20px;
+  color: green;
+  font-family: chalkboard, "Comic Sans MS"
+}
+
+.line input[type="text"] {
+  background-color: #FFFFFF;
+  border: none;
+  width: 298px;
+  color: green;
+  background: #11230E;
+  font-size: 20px;
+  font-family: chalkboard, "Comic Sans MS";
+}
+
+#gui {
+  display: block;
+}
+
+#command_prompt {
+  display: none;
+  background-color:#11230E;
+}
+
+#channel_3 {
+  display: none;
+  background-color:#11230E;
+}
+
+#channel_number {
+
+}
+
+#screen {
+  /*background: url('../images/sets/tv-screen-old.png') no-repeat;*/
+  background-size: 724px 546px;
+  background-position: center;
+  background-color: #D9D9D0;
+  border-color: #000000;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 440px;
+  height: 480px;
+  border: 1px solid #989381;
+  border-width: 1px 4px 4px 1px;
+}
+
+.ft_player_controls {
+  display: none;
+  width: 412px;
+  margin-top: 5px;
+}
+
+.ft_player_controls input, #play_back, #record {
+  margin-top: 10px;
+  color: #736F5E;
+  font-size: 14px;
+}
+
+.ft_player_controls form {
+  display: none;
+}
+
+#ft_player_logo {
+  display: block;
+  float: right;
+  color: #21600e;
+  font-size: 10px;
+  font-weight: bold;
+  width: 25px;
+  margin-right: 16px;
+  margin-left: 10px;
+}
+
+#ft_player_logo_img {
+  background: url('../../images/logo_small_green_navy_filmtronic.png') no-repeat;
+  background-size: 40px 35px;
+  width: 40px;
+  height: 34px;
+}
+
+#play_back {
+  display: none;
+}
+
+#record {
+  display: block;
+}
+
+.sb {
+  display: none;
+}
+
+#speech_bubble_1a {
+  height: 180px;
+  width: 150px;
+  font-size: 14px;
+  margin-left: 24px;
+  margin-top: 58px;
+  border: 1px solid #86826C;
+  border-bottom-width: 0px;
+  padding: 5px;
+  position: absolute;
+  z-index:2;
+  color:#86826C;
+}
+#speech_bubble_1b {
+  height: 2px;
+  width: 10px;
+  margin-left:24px;
+  margin-top:249px;
+  border-bottom-style:none;
+  border: 1px solid #86826C;
+  border-width: 0px 1px 1px 1px;
+  padding: 5px;
+  position: absolute;
+  z-index:2;
+}
+#speech_bubble_1c {
+  height: 2px;
+  width: 130px;
+  margin-left: 46px;
+  margin-top:249px;
+  border-bottom-style:none;
+  border: 1px solid #86826C;
+  border-width: 1px 0px 0px 0px;
+  padding: 5px;
+  position: absolute;
+  z-index:2;
+}
+
+#speech_bubble_2a {
+  height: 180px;
+  width: 150px;
+  font-size: 14px;
+  margin-left: 212px;
+  margin-top: 58px;
+  border: 1px solid #86826C;
+  border-bottom-width: 0px;
+  padding: 5px;
+  position: absolute;
+  z-index: 2;
+  color: #86826C;
+}
+#speech_bubble_2b {
+  height: 2px;
+  width: 10px;
+  margin-left:212px;
+  margin-top:249px;
+  border-bottom-style:none;
+  border: 1px solid #86826C;
+  border-width: 0px 1px 1px 1px;
+  padding: 5px;
+  position: absolute;
+  z-index:2;
+}
+#speech_bubble_2c {
+  height: 2px;
+  width: 131px;
+  margin-left:233px;
+  margin-top:249px;
+  border-bottom-style:none;
+  border: 1px solid #86826C;
+  border-width: 1px 0px 0px 0px;
+  padding: 5px;
+  position: absolute;
+  z-index:2;
+}
+
+.dark_green {
+  color: #21600e;
+}
+
+.navy {
+  color: #374C92;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.app_title {
+  float: left;
+  margin-top: 14px;
+  color: #21600e;
+}
+
+#poster {
+  background: url("/images/therestlessdays_intro.png") top center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.gossip_section  {
+  margin-top: 20px;
+  width: 400px;
+  float: left;
+  margin-left: 40px;
+  font-size: 10px;
+}
+
+.gossip_tab {
+  display: inline-block;
+  border: 1px solid #11230E;
+  padding: 5px;
+  width: 143px;
+  font-size: 10px;
+  color: green;
+}
+
+.great_question {
+  color: green;
+  font-weight: bold;
+}
+
+/*
+#char_phil {
+  width: 170px;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: block;
+}
+
+#char_ledge {
+  width: 170px;
+  margin-left: 500px;
+  margin-top: -200px;
+  display: block;
+}
+*/
+
+.body_game_bg {
+  background: #E8EBF4;
+  border-width: 20px 0px 0px 0px;
+  border-color: grey;
+  border-style: solid;
+}
+
+.body_game_bg #breadcrumbs {
+  font-size: 10px;
+}
+
+.review_score {
+  font-size: 20px;
+  color: #8ED465;
+}
+
+.alert {
+  color:red;
+}
+
+.film_reviews.column h1 {
+  padding-bottom: 20px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #374C92;
+  display: block;
+  margin: 0;
+  padding: 0px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: bold;
+  color: #374C92;
+  display: block;
+  margin: 0;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+
+#tm_header_symbol{
+  color: #358901;
+  margin-top:0px;
+  float: left;
+  font-size: 14px;
+}
+
+#header {
+  padding-top: 20px;
+}
+
+#logo {
+  padding-left: 20px;
+}
+
+.logo_small_text {
+ color: #21600e;
+ float: left;
+ font-size: 14px;
+ font-weight: bold;
+ margin-top: 14px;
+}
+
+.text_coming_soon {
+  background-color: #99D884;
+  border-width: 2px 0px 2px 0px;
+  border-style: dashed;
+  width: 100%;
+  text-align: center;
+  font-family: verdana;
+  color: #113B69;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.column {
+  float: left;
+  width: 48%;
+  padding-left: 20px;
+  font-size: 10px;
+  vertical-align: top;
+}
+
+.current {
+  border: 4px solid red;
+  padding: 10px;
+}
+
+.game_start_link {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.game_coming_soon {
+  color: orange;
+  font-weight: none;
+  font-size: 20px;
+}
+
+#game_start_button {
+  margin-top: 55px;
+}
+
+#arrow_controls {
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+#button_a {
+  margin-top: 220px;
+  margin-left: 150px;
+}
+
+#button_b {
+  margin-top: 0px;
+  margin-left: 250px;
+}
+
+#breadcrumbs {
+  padding-left: 20px;
+}
+
+.poster img {
+  border: 2px solid #75726C;
+}
+
+.main_review_poster {
+  padding-right: 10px;
+}
+
+.short_desc {
+  overflow: true;
+}
+
+.top_links {
+  float: right;
+  margin-top: 14px;
+  margin-right: 20px;
+  color: #113B69;
+  font-size: 14px;
+}
+
+.top_links a {
+  color: #113B69;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.drpdwnbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.drpdwnbtn:hover, .drpdwnbtn:focus {
+    background-color: #E0FFFF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.drpdwncntnt {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.drpdwncntnt a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
